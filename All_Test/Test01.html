@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="JS/jquery-3.3.1.js"></script>
+    <style>
+        .box1{
+            width:500px;
+            height:500px;
+            background:tomato;
+            position:relative;
+            z-index: 1;
+        }
+        .box2{
+            width:200px;
+            height:100%;
+            background:skyblue;
+            position:absolute;
+            top:0;
+            right:0;
+            z-index: 3;
+        }
+        .box3{
+            width:200px;
+            height:100%;
+            z-index: 2;
+            position:absolute;
+            top:0;
+            right:0;
+        }
+        .tt{
+            width:90px;
+            height: 90px;
+            background:lightgreen;
+            display: inline-block;
+            margin-right:5px;
+        }
+        .box4{
+            width:200px;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box3">
+            <div class="box2">
+                <div class="box4">
+                    <div class="tt"></div>
+                    <div class="tt"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+          setTimeout(function () {
+              $(".box2").stop().animate({width:0},1000,function () {
+                  $(this).css({display:"none"})
+              })
+          },1000);
+              $(".box3").on("mouseenter",function () {
+                   $(".box2").stop();
+                   $(".box2").show().animate({width:200},1000,function () {
+                       $(this).css({display:"block"});
+                       console.log(1)
+                   })
+              }).on("mouseleave",function () {
+                  $(".box2").stop().animate({width:0},1000,function () {
+                      $(this).css({display:"none"});
+                      console.log(2)
+                  })
+              })
+    })
+    </script>
+</body>
+</html>
