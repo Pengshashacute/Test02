@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="swiper.min.css">
+    <script src="jquery-3.3.1.js"></script>
+    <script src="swiper.min.js"></script>
+    <style>
+
+        html,body{width:100%;height:100%;}
+        .swiper-container{width:100%;height:100%;}
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide keep01"><img src="Images/zhuti01.jpg" alt=""></div>
+        <div class="swiper-slide keep02"><img src="Images/zhuti04.jpg" alt=""></div>
+        <div class="swiper-slide keep01"><img src="Images/zhuti01.jpg" alt=""></div>
+        <div class="swiper-slide keep02"><img src="Images/zhuti04.jpg" alt=""></div>
+        <div class="swiper-slide keep01"><img src="Images/zhuti01.jpg" alt=""></div>
+        <div class="swiper-slide keep02"><img src="Images/zhuti04.jpg" alt=""></div>
+    </div>
+    <div class="swiper-pagination keep04"></div><!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
+</div>
+<!--轮播图已完成-->
+<script>
+    $(function () {
+        var mySwiper = new Swiper('.swiper-container',{
+            mousewheel:true,
+            autoplay:true,
+            disableOnInteraction: false,
+            loop:true,
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets:true,
+            },
+        })
+    })
+</script>
+</body>
+</html>

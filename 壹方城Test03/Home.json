@@ -1,0 +1,41 @@
+{
+  "Nav_img":["Images/b1.png","Images/b2.png","Images/b3.png"],
+  "sidebar_img":[
+            "Images/201708091609111508878.jpg",
+            "Images/201708091611238124757.jpg",
+            "Images/201708091613561841908.jpg",
+            "Images/201708091617021278262.jpg",
+            "Images/201708091624110213575.jpg",
+            "Images/201708091625121778554.png",
+            "Images/201708091755177190347.jpg",
+            "Images/201708091755542301230.png",
+            "Images/201709281451563383523.png",
+            "Images/201710222107096661522.png",
+            "Images/201710241548222697224.png",
+            "Images/201710241550161832379.jpg",
+            "Images/201905131750210796673.png",
+            "Images/201905131750324163157.png",
+            "Images/201905131751057962249.png"
+  ],
+  "Children_img01":[
+            "Images/Children01_img/201811081737254808313.png",
+            "Images/Children01_img/201811081737386975873.png",
+            "Images/Children01_img/201811081737598547974.png",
+            "Images/Children01_img/201811081738108804281.png",
+            "Images/Children01_img/201811081738287484500.png",
+            "Images/Children01_img/201811081739357072799.png",
+            "Images/Children01_img/201811081928550664538.png",
+            "Images/Children01_img/201812050954139268324.png"
+  ],
+  "Froll_content01":[
+            "Kiehls科颜氏","植村秀","资生堂","IPSA茵芙莎","YSL圣罗兰美妆","CPB肌肤之钥","LANCOME兰蔻"
+  ],
+  "Froll_content02":[
+            "Ole'","CGV影城","利寶閣","迪卡侬","覔书店","顺电","UK KTV","Nitori尼打利家具"
+  ],
+  "Froll_content03":[
+            "米兰婚纱","Mix Match","H&M","ZARA","UNIQLO",":CHOCOOLATE","adidsa Originals","FILA FUSIO3N"
+  ]
+
+
+}
