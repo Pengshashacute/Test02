@@ -1,0 +1,38 @@
+.nav_block ul li.current a{display:block;font-size:18px;font-style:italic;color:#fff;line-height:30px;padding:16px 0 16px 55px;background:url("../Images/navBg.png")no-repeat center;}
+.clear{clear: both;}
+.common_inner{position:relative;width:100%;height:100%;background:#f1ece6;}
+.common_content{position:relative;margin-left:170px;width:calc(100% - 170px);height:100%;min-width:1180px;min-height:715px;overflow: hidden;}
+.Shop_guide{position:relative;width:100%;height:88px;background:url("../Images/Children01_img/Le15.jpg")repeat;}
+.Shop_top{position:relative;width:429px;height:88px;float: left;}
+.Shop_img{position:absolute;top:0;left:0;width:100%;height:100%;}
+.Shop_img img{width:100%;height:100%;}
+.Shop_title{position:absolute;top:50px;left:0;z-index:9;}
+.Shop_title span{font-size:22px;color:#fff;line-height:26px;font-style:italic;}
+.Shop_title em{font-size:14px;color:#fff;line-height:20px;margin-left:10px;font-style:italic;}
+.Shop_lay{position:relative;width:94%;height:88px;margin:0 auto;}
+.Shop_block{position:relative;float:right;padding:38px 0 0 0;}
+.Shop_block ul li{float:right;padding:11px 0;margin-left:15px;}
+.Shop_block ul li a{width:91px;display:block;text-align:center;padding:0;font-size:14px;color:#be8939;line-height:28px;background:url("../Images/Children01_img/Le13.png")no-repeat;}
+.Shop_block ul li:hover a,.Shop_block ul li.current a{background:url("../Images/Children01_img/le12.png")no-repeat center;color:#fff;-webkit-transition: all 0.2s ease 0.2s;-ms-transition: all 0.2s ease 0.2s;-o-transition: all 0.2s ease 0.2s;-moz-transition: all 0.2s ease 0.2s;transition: all 0.2s ease 0.2s;}
+
+.brand_conceht{position:absolute;top:50%;left:50%;width:1180px;height:648px;overflow:hidden;margin:-282px 0 0 -590px;-webkit-box-shadow: 5px 5px 5px #d8d8d8;-ms-box-shadow: 5px 2px 5px #d8d8d8;-moz-box-shadow: -5px 2px 5px #d8d8d8;box-shadow: -2px -2px -5px #d8d8d8;}
+.Vip_center{position:relative;width:100%;height:100%;margin:0 auto;background:#fff;}
+.Vip_center.vipjifen{position:relative;width:90%;height:100%;margin:0 auto;background:#fff;}
+.nav_top{position:relative;width:100%;height:82px;padding:30px 20px 15px 30px;background:url("../Images/Children03_img/bn1.png") no-repeat;}
+.nav_top h2{font-size:24px;line-height:30px;color:#be8939;letter-spacing: 2px;}
+.nav_top p{font-size:16px;color:#999797;line-height:20px;}
+.nav_vipcenter{position:relative;width:100%;height:100%;overflow:hidden;background:url("../Images/Children03_img/bn2.png")}
+.nav_left{position:relative;width:125px;float:left;}
+.nav_left ul li{width:95px;height:42px;color:#666;cursor:pointer;padding-left:30px;line-height:42px;font-size:16px;}
+.nav_left ul li:hover{color:#be8939}
+.nav_left ul li.current{color:#FFF;background:url("../Images/Children03_img/bn3.png")}
+.card_parent{position:relative;width:840px;float:left;margin-left:90px;}
+.card_lay{position:relative;;width:100%;height:480px;margin-bottom:28px;overflow:hidden;}
+.card_ablock{position:relative;top:0;left:0;width:100%;height:480px;margin-bottom: 28px;}
+.card_ablock h2{font-size:16px;color:#be8939;line-height:28px;}
+.card_ablock p{font-size:14px;color:#333;line-height:28px;}
+.mCSB_container{padding:10px!important;}
+.mCSB_scrollTools .mCSB_draggerRail{background:#ccc!important;}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background:#be8939!important;}
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background:#be8939!important;}
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background:#be8939!important;}

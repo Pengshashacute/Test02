@@ -3,44 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.css">
     <script src="jquery-3.3.1.js"></script>
+    <script src="../js/jquery.mCustomScrollbar.js"></script>
     <style>
        *{margin:0;padding:0;}
-       .box{
+       #box{
            width:400px;
-           border:5px solid lightgreen;
+           height:300px;
+           overflow: auto;
        }
-       .clear{clear: both;}
-       ol,ul{
-           list-style:none;
-       }
-        li{
-            float:left;
-            width:50px;
-            height:50px;
-            background:tomato;
-            margin-right:20px;
-        }
+       .mCSB_scrollTools .mCSB_draggerRail{background:#ccc;}
+       .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background:#be8939;}
+       .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background:#be8939;}
+       .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background:#be8939;}
     </style>
 </head>
 <body>
-    <div class="box">
-        <ul>
-            <li>L1</li>
-            <li>L2</li>
-            <li>L3</li>
-            <li>L4</li>
-            <li>L5</li>
-        </ul>
-        <div class="clear"></div>
+<div id="box">
+    <div class="content">
+        <p>The element(s) you want to add scrollbar(s) should have the typical CSS properties of an overflowed block which are a height (or max-height) value, an overflow value of auto (or hidden) and content long enough to require scrolling. For horizontal scrollbar, the element should have a width (or max-width) value set.</p>
+        <p>the element should have a width (or max-width) value set</p>
+        <p>the element should have a width (or max-width) value set</p>
+        <p>the element should have a width (or max-width) value set</p>
+        <p>the element should have a width (or max-width) value set</p>
+        <p>the element should have a width (or max-width) value set</p>
+        <p>the element should have a width (or max-width) value set</p>
+        <p>the element should have a width (or max-width) value set</p>
+        <p>the element should have a width (or max-width) value set</p>
+        <p>the element should have a width (or max-width) value set</p>
+        <p>the element should have a width (or max-width) value set</p>
+        <p>the element should have a width (or max-width) value set</p>
+        <p>the element should have a width (or max-width) value set</p>
+        <p>the element should have a width (or max-width) value set</p>
+        <p>the element should have a width (or max-width) value set</p>
+        <p>the element should have a width (or max-width) value set</p>
+
     </div>
-    <script>
-        // $(function () {
-        //     $("li").on("mouseover",function () {
-        //         let index = $(this).index()+1;
-        //         console.log(index);
-        //     })
-        // })
-    </script>
+
+</div>
+
 </body>
+<script>
+    $(window).on("load",function(){
+        $("#box").mCustomScrollbar({
+            axis:"yx",
+            scrollButtons:{enable:true},
+            theme: "minimal-dark",
+            scrollbarPosition:"outside",
+            setWidth:false,
+            setHeight:false,
+        });
+    });
+</script>
 </html>

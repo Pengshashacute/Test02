@@ -1,0 +1,102 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {padding:0; margin:0;}
+body{ font-family:'Microsoft Yahei',Arial,Simsun;font-size:14px;}
+table {border-collapse:collapse; border-spacing:0;}
+fieldset,img {border:0;}
+address,caption,cite,code,dfn,em,th,var {font-weight: normal;font-style: normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-weight:normal;font-size:100%;}
+q:before,q:after {content:'';}
+abbr,acronym {border:0;}
+a{text-decoration:none; outline:none; blr:expression(this.onFocus=this.blur());}
+.clear{ display:block; clear:both;}
+.relative{ position:relative;}
+.grayscale{ filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */ filter: gray; /* IE6-9 */ -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */}
+.fl{float:left;}
+.fr{float:right;}
+html,body {height: 100%;}
+
+/*初始动画*/
+.index_nullBlock{position:fixed;top:0;left:0;width:50%;height:100%;z-index:9999;background:#fff;}
+.index_nullBlockB{position:fixed;top:0;right:0;width:50%;height:100%;z-index:9999;background:#fff;}
+
+/*主体*/
+.common_inner{min-height: 780px;}
+.bodyer{position:relative;width:100%;height:100%;overflow: hidden;}
+.index_body{position:relative;width:100%;height:100%;overflow: hidden;min-width:1350px;min-height:768px;}
+.common_bodyer{position:relative;width:100%;height:100%;overflow: hidden;min-width:1350px;min-height:620px;}
+.nav_content{position:absolute;top:0;left:0;width:170px;height:100%;background:url("../Images/b_9.png");z-index: 999;-moz-box-shadow:2px 2px 2px #cdc9c8; -webkit-box-shadow:2px 3px 2px #cdc9c8; box-shadow:2px 2px 2px #cdc9c8;}
+.nav_imgBlock{position: relative;width:100%;height:100%;}
+.common_content{position:relative;margin-left:170px;width:100%;height:100%;min-width:1180px;min-height:715px;overflow: hidden;}
+.index_content{position:absolute;top:0;left:-332px;width:100%;height:100%;background:#ccc;}
+.index_textBlock{position:absolute;bottom:30px;right:40px;z-index:99;display: none;}
+.swiper-container{width:100%;height:100%;-moz-user-select: none;-webkit-user-select:none; }
+.swiper-container .keep img{width:100%;height:100%;}
+.index_rightButton{position:absolute;right:0;top:0;width:332px;height:100%;z-index:882;}
+.index_rightButton img{position:absolute;top:50%;right:40px;margin-top:-25px;}
+.index_bgColor{position:absolute;left:0;top:0;width:100%;height:100%;background:url("../Images/b_7.png");z-index:886;display: none;}
+.index_rightContent{position:absolute;right:0;top:0;z-index:888;width:332px;height:100%;overflow-y:scroll;background:#fff;}
+.index_bodyer .nav_content {left:0;}
+.index_bodyer .nav_imgBlock {left:0;}
+.index_bodyer .index_bgColor {display: block;}
+.index_bodyer .index_rightContent {right:0;}
+.index_bodyer .common_content {padding-left:0;}
+.index_bodyer .index_content {margin-left:0;}
+.index_bodyer .nav_icon {display: none;}
+
+/*缓动效果*/
+/*.Foot{*/
+    /*animation: translate 0.4s ease-in-out 0.4s backwards;*/
+    /*-webkit-animation: translate 0.4s ease-in-out 0.4s backwards;*/
+    /*-ms-animation: translate 0.4s ease-in-out 0.4s backwards;*/
+    /*-moz-animation: translate 0.4s ease-in-out 0.4s backwards;*/
+    /*-o-animation: translate 0.4s ease-in-out 0.4s backwards;*/
+/*}*/
+
+.Nav{position: relative;width:100%;height:100%;min-height:700px;}
+
+.nav_Click{position:absolute;top:0;left:0;width:32px;height:100%;background:#fff;cursor:pointer;z-index:999;}
+.nav_Click span{position:absolute;top:50%;left:50%;width:6px;height:38px;display:block;margin:-19px 0 0 -3px;}
+
+.Nav .logo{position:relative;display:block;width:122px;height:93px;z-index:99;padding-top:40px;margin:0 auto;}
+.logo img{width:100%;display:block;}
+.nav_center{position:absolute;top:46%;width:100%;margin-top:-186px;}
+.nav_center ul li{position:relative;width:100%;}
+.nav_center ul li a{display:block;font-size:16px;color:#333;line-height:30px;padding:16px 0 16px 55px;}
+.nav_block{position:relative;width:110%;}
+.nav_block ul li:hover a{display:block;font-size:18px;font-style:italic;color:#be8939;line-height:30px;padding:16px 0 16px 55px;}
+.nav_block ul li.current a{display:block;font-size:18px;font-style:italic;color:#fff;line-height:30px;padding:16px 0 16px 55px;background:url("../Images/navBg.png")no-repeat center;}
+.nav_center ul li a,.icon ul li .inco_em,.brand_clid ul li .Fashion {-webkit-transition:all .3s ease;-ms-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease;}
+.Footer{position:absolute;bottom:20px;left:0;width:100%;text-align:center;}
+.Foot{position:relative;width:90%;margin:15px auto;}
+.Foot ul li{float:left;width:34px;height:34px;margin:0 0 0 12px;}
+.Foot ul li a{position:relative;width:100%;display:block;}
+.Foot ul li a img{width:100%;}
+.links{position:relative;width:90%;margin:0 auto;}
+.links ul li{width:100%;font-size:14px;color:#808080;line-height:28px;padding-bottom:5px;}
+.links a{width:48%;float:left;font-size:14px;color:#808080;text-align:center;line-height:20px;}
+.links ul li a.bi{border-right:solid 1px #eee;}
+.links a:hover{color:#be8939;}
+
+
+/*侧边栏主体*/
+.index_rightBrand{position:relative;width:100%;}
+.Brand_title{width:100%;height:50px;background:#be8939 url("../Images/Le1.jpg")no-repeat;background-size:100%;}
+.Brand_main{position:relative;width:auto;padding:22px 0 0 25px;}
+.Brand_main span{font-size:18px;color:#fff;line-height:20px;margin-right:10px;}
+.Brand_main em{font-size:14px;color:#fff;line-height:20px;margin-right:10px;}
+.Brand_store{position:relative;width:100%;}
+.Brand_store ul li{position:relative;width:50%;float:left;overflow:hidden;}
+.Brand_store ul li a{display:block;padding:2px;border-right:solid 1px #eee;border-bottom:solid 1px #eee;}
+.Brand_store ul li a img{display:block;margin: 0 auto;}
+.Brand_list{position:relative;width:100%;}
+.Brand_list .ablock_list{position:relative;width:100%;height:110px;display:block;-moz-box-shadow:2px 2px 2px #ddd; -webkit-box-shadow:2px 3px 2px #ddd; box-shadow:2px 2px 2px #ddd;}
+.Brand_list .ablock_list a{position:relative;width:100%;height:100%;display:block;overflow: hidden;}
+.Brand_list .ablock_list img.img1{float:left;width:59px;height:56px;padding:27px 25px 27px 60px;}
+.Brand_list .Brand_bi{position:relative;float:left;padding:28px 0;}
+.Brand_list .Brand_bi h2{font-size:18px;line-height:30px;color:#fff;}
+.Brand_list .Brand_bi p{font-size:14px;line-height:24px;color:#ffff;}
+
+
+
+

@@ -1,145 +1,52 @@
 $(function () {
-    //json
     $.ajax({
-        type:"get",
-        url:"Home.json",
-        cache:true,
-        success:function (data) {
-            var $Nav_Img = data.Nav_img;
-            var $floor_img = data.Children_img01;
-            var $froll_content01 = data.Froll_content01;
-            var $froll_content02 = data.Froll_content02;
-            var $froll_content03 = data.Froll_content03;
-            $.each($Nav_Img,function (i,t) {
-                var $a = $("<a href='#'></a>");
-                var img = $("<img>").attr("src",t);
-                var $li = $("<li></li>");
-                $(".Foot ul").append($li.append($a.append(img)))
-            });
-            $.each($floor_img,function (i,t) {
-                var img = $("<img>").attr("src",t);
-                var $li = $("<li></li>");
-                $(".floor_img ul").append($li.append(img))
-            });
-            $.each($froll_content01,function (i,t) {
-                var $a = $("<a href='#'>"+t+"</a>");
-                var $li = $("<li></li>");
-                $(".cent01 ul").append($li.append($a))
-            })
-            $.each($froll_content02,function (i,t) {
-                var $a = $("<a href='#'>"+t+"</a>");
-                var $li = $("<li></li>");
-                $(".cent02 ul").append($li.append($a))
-            })
-            $.each($froll_content03,function (i,t) {
-                var $a = $("<a href='#'>"+t+"</a>");
-                var $li = $("<li></li>");
-                $(".cent03 ul").append($li.append($a))
-            })
-        }
+      type:"get",
+      url:"Home.json",
+      cache:true,
+      success:function (data) {
+          $.each(data.Hot_activity,function (i1,t1) {
+               var $div01 = $("<div class='Hot_active'></div>").appendTo(".web_active");
+               var $div02 = $("<div class='Hot_block'></div>").appendTo($div01);
+               var $ul = $("<ul></ul>").appendTo($div02);
+              $.each(t1,function (i2,t2){
+                  var $li = $("<li></li>").appendTo($ul);
+                  var $a = $("<a href="+ t2.href +"></a>").appendTo($li);
+                  var Hot_img = $("<div class='Hot_img'></div>").appendTo($a);
+                  var Hot_text = $("<div class='Hot_text'></div>").appendTo($a);
+                  $("<img/>").attr("src",t2.images).appendTo(Hot_img);
+                  var hot_name = $("<div class='hot_name'></div>").appendTo(Hot_text);
+                  $("<p></p>").html(t2.p).appendTo(hot_name);
+                  var date_day = $("<div class='date_day'></div>").appendTo(Hot_text);
+                  var $a2 = $("<a href="+t2.href+"></a>").appendTo(date_day);
+                  $("<span></span>").html(t2.span).appendTo(date_day);
+                  $("<em></em>").html(t2.emTT).appendTo($a2);
+                  $("<div class='clear'></div>").appendTo(date_day);
+              })
+          });
+          $.each(data.Nav_img.img,function (i3,t3) {
+              var $li= $("<li></li>").appendTo(".Foot ul");
+              var $a = $("<a href="+data.Nav_img.href[i3]+"></a>").appendTo($li);
+                  $("<img/>").attr("src",t3).appendTo($a);
+          });
+                  $("<div class='clear'></div>").appendTo(".Foot ul")
+      }
     });
-    //    nav导航栏底部隔墙
-    var $div = $("<div></div>");
-    $(".Foot ul").after($div.addClass("clear"));
-    //主体移动轮
-    $(".floor_left ul li").on("mouseenter",function () {
-        var index_Img=$(this).index();
-        $(this).addClass("current").siblings().removeClass("current");
-        $(".floor_img ul").stop().animate({left:index_Img*-860},)
+    var index = 0;
+    $(".Arrow_1").on("click",function () {
+        index++;
+        if(index>7){
+            index=1;
+            $(".web_active").css({left:0})
+        }
+        $(".web_active").stop().animate({left:-(1132+90)*index})
+    });
+    $(".Arrow_2").on("click",function () {
+        index--;
+        if(index<0){
+            index=0
+        }
+        $(".web_active").stop().animate({left:-(1132+90)*index})
     })
-
-
 });
-
-
-
-
-
-
-
-
-// $(function() {
-//     $.ajax({
-//         url: "../Ajax/AjaxCommon.aspx?action=LcList",
-//         type: "GET",
-//         async: true,
-//         data: {},
-//         dataType: "text",
-//         // contentType: "charset=utf-8",
-//         cache: false,
-//         success: function(data, textStatus) {
-//             var obj = eval("(" + data + ")");
-//             $(".floor_left ul").html(obj.Msg);
-//             $(".floor_img ul").html(obj.Url);
-//
-//             var dataX = 0,
-//                 dataY = 0,
-//                 dataW = 0,
-//                 dataH = 0,
-//                 dataImg = "",
-//                 dataName = "",
-//                 lisStyle = '',
-//                 dataLocation = "";
-//             var floorId = getQueryString("floorId");
-//             floorId = floorId == null ? "0" : floorId;
-//             $(".floor_left ul li").eq(floorId).addClass("current");
-//             var thisFloor = function() {
-//                 var maxSize = $(".floor_img ul li").length;
-//                 var marginValue = -860 * floorId;
-//                 $(".floor_img ul").stop().animate({ marginLeft: marginValue });
-//                 $(".floor_left ul li").eq(floorId).addClass("current").siblings().removeClass("current");
-//             }
-//             // 楼层点击
-//             $(".floor_left ul li").bind("mouseover", function() {
-//                 $(".plot_bg").css({ "display": "none" });
-//                 floorId = $(this).index();
-//                 thisFloor();
-//             });
-//
-//             var showFloor = function(_node) {
-//                 floorId = _node.attr("data-floor");
-//                 dataX = parseInt(_node.attr("data-x"));
-//                 dataY = parseInt(_node.attr("data-y"));
-//                 dataW = parseInt(_node.attr("data-w"));
-//                 dataH = parseInt(_node.attr("data-h"));
-//                 dataImg = _node.attr("data-img");
-//                 dataName = _node.attr("data-name");
-//                 lisStyle = _node.attr("data-Style"),
-//                     dataLocation = _node.attr("data-location");
-//                 dataId = _node.attr("data-id");
-//                 $(".plot_bg").stop(true, true).fadeIn();
-//                 thisFloor();
-//                 $(".log_plot").css({ "top": dataY, "left": dataX });
-//                 $(".plot_img img").attr({ "src": dataImg });
-//                 $(".plot_bg h4").text(dataName);
-//                 $(".Liststyle").text(lisStyle);
-//                 $(".plot_load .location").text(dataLocation);
-//                 $(".plot_bg").attr({ "href": "BrandLine/inner.aspx?id=" + dataId + "&floorid=" + floorId + "&flag=A" });
-//             }
-//             $(".froll_cent a,.floorImg_block").bind("mouseover", function() {
-//                 showFloor($(this));
-//             })
-//             $(".floor_right,.plot_bg").bind("mouseleave", function() {
-//                 $(".plot_bg").stop(true, true).fadeOut();
-//             })
-//             $(".floor_clabrand").mCustomScrollbar();
-//             $(".froll_title a").toggle(function() {
-//                 $(this).text("返回");
-//                 $(this).parents(".floor_btop").siblings().css({ "display": "none" });
-//                 var blockHeight = $(this).parents(".floor_btop").find("a").length / 2 * 28;
-//                 $(this).parents(".floor_btop").find(".froll_cent").stop().animate({ height: blockHeight }, function() {
-//                     $(".floor_clabrand").mCustomScrollbar();
-//                 });
-//             }, function() {
-//                 $(this).text("更多");
-//                 $(".floor_btop").siblings().css({ "display": "block" });
-//                 $(".froll_cent").stop().animate({ height: 112 }, function() {
-//                     $(".floor_clabrand").mCustomScrollbar();
-//                 });
-//             })
-//         }
-//     });
-
-
 
 
